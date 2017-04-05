@@ -99,7 +99,7 @@ Force install application
 ```
 adb install -r -f -d APK_NAME
 ```
-List Packages (icluding apk path)
+List Packages (including apk path)
 ```
 adb shell pm list packages -f
 ```
