@@ -45,6 +45,14 @@ Get IP Addres (2)
 ```
 adb shell netcfg | grep wlan0 | awk '{print $3}' | cut -f1 -d"/"
 ```
+Get WIFI MAC
+```
+adb shell cat /sys/class/net/wlan0/address
+```
+Get BT MAC
+```
+adb shell settings get secure bluetooth_address
+```
 Get APN list
 ```
 adb shell cat /etc/apns-conf.xml
