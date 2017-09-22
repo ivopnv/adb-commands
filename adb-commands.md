@@ -107,6 +107,10 @@ Force install application
 ```
 adb install -r -f -d APK_NAME
 ```
+Install grant all Runtime permissions
+```
+adb install -g APK_NAME
+```
 List Packages (including apk path)
 ```
 adb shell pm list packages -f
@@ -127,6 +131,10 @@ adb shell pm dump com.systemonenoc.avatarapp | grep -i code
 List Permissions (including protection level)
 ```
 adb shell pm list permissions -f
+```
+List Runtime Permissions
+```
+adb shell pm list permissions -g -d
 ```
 Granted Permissions
 ```
@@ -162,7 +170,7 @@ Record a video
 ```
 adb shell screenrecord /sdcard
 ```
-Run as app user
+Run as app user (only in debug mode)
 ```
 adb shell run-as PACKAGE_NAME
 ```
